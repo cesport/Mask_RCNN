@@ -62,8 +62,8 @@ class ModelConfig(Config):
     # Number of training steps per epoch
     STEPS_PER_EPOCH = 5
  
-    # Skip detections with < 90% confidence
-    DETECTION_MIN_CONFIDENCE = 0.9
+    # Skip detections with < 50% confidence
+    DETECTION_MIN_CONFIDENCE = 0.5
  
 class InferenceConfig(ModelConfig):
     # Set batch size to 1 since we'll be running inference on
