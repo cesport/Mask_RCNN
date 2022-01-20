@@ -52,7 +52,7 @@ class ModelConfig(Config):
  
     # We use a GPU with 12GB memory, which can fit two images.
     # Adjust down if you use a smaller GPU.
-    IMAGES_PER_GPU = 2 # 1
+    IMAGES_PER_GPU = 1 # 1
 
     # Number of classes (including background)
     NUM_CLASSES = 1 + 1 # Background,
@@ -229,7 +229,7 @@ def train(dataset_train, dataset_val, model):
     print("Training network heads")
     model.train(dataset_train, dataset_val,
                 learning_rate=config.LEARNING_RATE,
-                epochs=30,
+                epochs=3,
                 layers='heads')
  
 def test(model, image_path = None, video_path=None, savedfile=None):
