@@ -17,6 +17,8 @@ from mrcnn import model as modellib
 from mrcnn import utils
 from mrcnn import visualize
 
+from PIL import Image, ImageDraw
+
 # In case of configuration
 # git clone the repo and append the path Mask_RCNN repo to use the custom configurations
 # git clone https://github.com/matterport/Mask_RCNN
